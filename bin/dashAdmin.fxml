@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admincontrol">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="manage" />
+          <Menu mnemonicParsing="false" text="stat" />
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="mailtable" layoutX="3.0" layoutY="324.0" prefHeight="274.0" prefWidth="790.0">
+        <columns>
+            <TableColumn fx:id="from1" prefWidth="100.7999267578125" text="From" />
+          <TableColumn fx:id="from" prefWidth="87.20001220703125" text="to" />
+          <TableColumn fx:id="object" minWidth="0.0" prefWidth="149.6000213623047" text="Objet" />
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="158.4000244140625" text="Date" />
+            <TableColumn fx:id="from11" prefWidth="124.79998779296875" text="Files" />
+            <TableColumn fx:id="from12" prefWidth="164.800048828125" text="consigne" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="39.0" prefHeight="274.0" prefWidth="362.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label layoutX="12.0" layoutY="87.0" text="Nom" />
+            <TextField fx:id="nameinf" layoutX="13.0" layoutY="112.0" />
+            <TextField fx:id="prenominf" layoutX="191.0" layoutY="112.0" />
+            <Label layoutX="188.0" layoutY="87.0" text="Prenom" />
+            <TextField fx:id="telinf" layoutX="13.0" layoutY="170.0" />
+            <TextField fx:id="mailinf" layoutX="191.0" layoutY="170.0" />
+            <Label layoutX="18.0" layoutY="146.0" text="Tel" />
+            <Label layoutX="195.0" layoutY="146.0" text="Email" />
+            <Button fx:id="edit" layoutX="154.0" layoutY="233.0" mnemonicParsing="false" text="edit" />
+            <Button fx:id="seeed" layoutX="250.0" layoutY="233.0" mnemonicParsing="false" onAction="#send" text="New mail" />
+            <ImageView fitHeight="70.0" fitWidth="78.0" layoutX="133.0" layoutY="4.0">
+               <image>
+                  <Image url="@../../../Desktop/Stage/15724-200.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="refresh" layoutX="33.0" layoutY="233.0" mnemonicParsing="false" text="refresh" />
+            <Label layoutX="12.0" layoutY="49.0" prefHeight="30.0" prefWidth="78.0" text="Admin" textFill="#ef0000">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <TableView fx:id="usertable" layoutX="400.0" layoutY="39.0" prefHeight="274.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="ident" prefWidth="75.0" text="Identifiant" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prenom" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="tel" prefWidth="75.0" text="tel" />
+            <TableColumn fx:id="mail" prefWidth="86.400146484375" text="mail" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

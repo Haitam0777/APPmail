@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Passcontrol">
+   <children>
+      <Button fx:id="modifPass" layoutX="222.0" layoutY="257.0" mnemonicParsing="false" onAction="#updatepass" text="Modifier mot de passe" />
+      <PasswordField fx:id="pass1" layoutX="185.0" layoutY="113.0" prefHeight="26.0" prefWidth="210.0" />
+      <PasswordField fx:id="pass2" layoutX="185.0" layoutY="187.0" prefHeight="26.0" prefWidth="210.0" />
+      <Label layoutX="185.0" layoutY="85.0" text="Nouveau Mot de passe" />
+      <Label layoutX="185.0" layoutY="163.0" text="Confirmation de mot de passe" />
+      <Label fx:id="error" contentDisplay="CENTER" layoutX="178.0" layoutY="229.0" prefHeight="18.0" prefWidth="210.0" text="." textFill="#c72e2e" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dashcontrol">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Logout" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Courier">
+            <items>
+              <MenuItem fx:id="envoi" mnemonicParsing="false" text="Send" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="mailtable" layoutX="384.0" layoutY="27.0" prefHeight="298.0" prefWidth="415.0">
+        <columns>
+          <TableColumn fx:id="from" prefWidth="99.20001220703125" text="From" />
+          <TableColumn fx:id="object" prefWidth="224.79995727539062" text="Objet" />
+            <TableColumn fx:id="date" minWidth="0.0" prefWidth="90.4000244140625" text="Date" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="39.0" prefHeight="274.0" prefWidth="362.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label layoutX="12.0" layoutY="87.0" text="Nom" />
+            <TextField fx:id="nameinf" layoutX="13.0" layoutY="112.0" />
+            <TextField fx:id="prenominf" layoutX="191.0" layoutY="112.0" />
+            <Label layoutX="188.0" layoutY="87.0" text="Prenom" />
+            <TextField fx:id="telinf" layoutX="13.0" layoutY="170.0" />
+            <TextField fx:id="mailinf" layoutX="191.0" layoutY="170.0" />
+            <Label layoutX="18.0" layoutY="146.0" text="Tel" />
+            <Label layoutX="195.0" layoutY="146.0" text="Email" />
+            <Button fx:id="edit" layoutX="120.0" layoutY="233.0" mnemonicParsing="false" text="edit" />
+            <Button fx:id="seeed" layoutX="196.0" layoutY="233.0" mnemonicParsing="false" onAction="#send" text="New mail" />
+            <ImageView fitHeight="70.0" fitWidth="78.0" layoutX="133.0" layoutY="4.0">
+               <image>
+                  <Image url="@../../../Desktop/Stage/15724-200.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <BarChart fx:id="stat" layoutX="26.0" layoutY="360.0" prefHeight="212.0" prefWidth="318.0">
+        <xAxis>
+          <CategoryAxis label="Jour" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="172.0" prefWidth="21.0" tickLabelGap="0.0" tickMarkVisible="false" />
+        </yAxis>
+      </BarChart>
+      <ListView fx:id="conlist" layoutX="392.0" layoutY="366.0" prefHeight="200.0" prefWidth="393.0" />
+      <Button fx:id="refresh" layoutX="563.0" layoutY="325.0" mnemonicParsing="false" onAction="#Ref" text="refresh" />
+   </children>
+</AnchorPane>
